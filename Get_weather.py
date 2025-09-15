@@ -36,5 +36,9 @@ while True:
         break
     lat, lon = get_cordinates(city)
     weather = get_weather(lat, lon)
+    temp = weather["main"]["temp"]
+    feels_like = weather["main"]["feels_like"]
 
-    print(weather["main"], weather["weather"][0]['main'])
+    condition = weather["weather"][0]["main"]
+
+    print("current temp:",temp, "feel like:", feels_like, condition)
